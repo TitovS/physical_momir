@@ -25,10 +25,10 @@ class Printer:
 
         # Sharpen
         img = img.filter(ImageFilter.UnsharpMask(radius=2, percent=150, threshold=3))
-        img.filename = "this_is_a_dirty_fix.jpg"
+
         # Threshold to black/white (no dithering)
         img = img.point(lambda x: 0 if x < 150 else 255, "1")
-
+        img.filename = "fixed"
         # Print
         self.printer.feed(1)
         self.printer.image(img)
