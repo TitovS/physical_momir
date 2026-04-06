@@ -6,11 +6,11 @@ readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
     "aiohttp>=3.13.5",
-    #    "adafruit-blinka>=9.0.4",
-    #    "adafruit-circuitpython-thermal-printer>=1.4.0",
-    #    "adafruit-python-shell>=1.11.1",
+    "adafruit-blinka>=9.0.4",
+    "adafruit-circuitpython-thermal-printer>=1.4.0",
+    "adafruit-python-shell>=1.11.1",
     "gpiozero>=2.0.1",
     "pillow>=12.2.0",
-    #    "rpi-gpio>=0.7.1",
+    "rpi-gpio>=0.7.1",
     "thermalprinter>=2.1.0",
 ]
