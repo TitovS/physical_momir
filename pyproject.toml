@@ -13,4 +13,5 @@ dependencies = [
     "pillow>=12.2.0",
     "rpi-gpio>=0.7.1",
     "thermalprinter>=2.1.0",
+    "lgpio>=0.2.2.0",
 ]
