@@ -1,8 +1,9 @@
 from gpiozero import OutputDevice
+from gpiozero import PWMOutputDevice
 
 
 class CD4511:
-    def __init__(self, a, b, c, d, name="display"):
+    def __init__(self, a, b, c, d, pwm, name="display"):
         self.name = name
         self.pins = [
             OutputDevice(a),  # A
@@ -10,6 +11,9 @@ class CD4511:
             OutputDevice(c),  # C
             OutputDevice(d),  # D
         ]
+
+        self.pwm = PWMOutputDevice(pwm, frequency=100)  # 100 Hz
+        self.pwm.value = 0.5  # 50% duty cycle (square wave)
 
     def display(self, num):
         if not (0 <= num <= 9):
