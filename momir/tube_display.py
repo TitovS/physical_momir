@@ -39,7 +39,7 @@ class CD4511:
 class TwoDigitDisplay:
     def __init__(self, tens, ones, pwm):
 
-        self.pwm = PWMOutputDevice(pwm, frequency=100)  # 100 Hz
+        self.pwm = PWMOutputDevice(pwm, frequency=1000)  # 100 Hz
         self.pwm.value = 0.5  # 50% duty cycle (square wave)
 
         self.tens = tens
