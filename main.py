@@ -25,7 +25,6 @@ tens_display = CD4511(
     b=26,
     c=21,
     d=16,
-    pwm=4,
     name="tens"
 )
 
@@ -34,11 +33,10 @@ ones_display = CD4511(
     b=5,
     c=6,
     d=12,
-    pwm=4,
     name="ones"
 )
 
-display = TwoDigitDisplay(tens_display, ones_display)
+display = TwoDigitDisplay(tens_display, ones_display, 4)
 
 
 # ----- Encoder + Button -----
