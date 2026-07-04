@@ -15,4 +15,8 @@ dependencies = [
     "thermalprinter>=2.1.0",
     "lgpio>=0.2.2.0",
 ]
+
+[project.scripts]
+test-single-tube = "test_single_tube:main"
+
 # sudo apt install liblgpio-dev
