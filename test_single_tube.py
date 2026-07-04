@@ -9,10 +9,10 @@ from momir.tube_display import CD4511
 def main():
     Device.pin_factory = LGPIOFactory()
 
-    pwm = PWMOutputDevice(4, frequency=1000)
+    pwm = PWMOutputDevice(17, frequency=1000)
     pwm.value = 0.5  # 50% duty cycle
 
-    display = CD4511(a=13, b=5, c=6, d=12, name="ones")
+    display = CD4511(a=27, b=22, c=23, d=24, name="ones")
 
     print("Testing single tube display — counting 0 to 9")
 
