@@ -2,8 +2,13 @@ from pathlib import Path
 
 from PIL import Image, ImageEnhance, ImageFilter
 from thermalprinter import ThermalPrinter
+import yaml
 
-MAX_WIDTH = 384
+# Load configuration
+with open("config.yaml", "r") as f:
+    config = yaml.safe_load(f)
+
+MAX_WIDTH = config["printer"]["max_width"]
 
 
 class Printer:

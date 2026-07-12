@@ -1,0 +1,29 @@
+# GPIO Pin Configuration for Physical Momir
+
+# Tube Display Configuration
+tubes:
+  tens_display:
+    a: 27
+    b: 22
+    c: 23
+    d: 24
+  ones_display:
+    a: 10
+    b: 9
+    c: 11
+    d: 25
+  pwm: 17
+
+# Rotary Encoder Configuration
+encoder:
+  encoder_a: 5
+  encoder_b: 6
+  button_pin: 13
+  min_value: 0
+  max_value: 99
+
+# Thermal Printer Configuration
+printer:
+  port: "/dev/serial0"
+  baudrate: 9600
+  max_width: 384
