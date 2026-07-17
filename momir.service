@@ -1,0 +1,16 @@
+[Unit]
+Description=Physical Momir Magic Card Printer
+After=network.target
+
+[Service]
+Type=simple
+User=pi
+WorkingDirectory=/home/pi/physical_momir
+ExecStart=/usr/bin/python3 /home/pi/physical_momir/main.py
+Restart=on-failure
+RestartSec=5
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target
